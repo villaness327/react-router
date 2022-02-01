@@ -1,0 +1,15 @@
+.activeLink{
+
+color:chartreuse;
+font-weight: bold;
+
+
+}
+
+.defaultLink{
+    color:turquoise;
+    font-weight: normal;
+
+
+
+}
