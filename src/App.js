@@ -21,7 +21,7 @@ function App(){
                         <Route path="users/:idUser" element={<Userpage />} />{/*id se va a llamar con lo params*/}
                         <Route path="/users" element={ <Users />} />
                         <Route path="/usuarios" element={<Navigate to="/users"/>} /> {/*redirecciona*/}
-                        <Route path="/dashboard/*" element={ <Dashboards />} />
+                        <Route path="/dashboard/*" element={ <Dashboards />} />{/*Dentro de dashboard habrán más rutas*/}
                         <Route path="*" element={ <Notfound />} /> 
                   </Routes>
             </BrowserRouter>
