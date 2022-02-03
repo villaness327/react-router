@@ -1,5 +1,5 @@
 import React from 'react';
-import {useNavigate,Route,Routes} from 'react-router-dom';
+import {useNavigate,Outlet,Link} from 'react-router-dom';
 
 function Dashboards(){
 
@@ -8,17 +8,20 @@ function Dashboards(){
        const handleclick=()=>navigate("/");  //Redirecciona usando el hook navigate
 
        return(
-           <div>
+            <div>
                     <h1>Este es el Dashboard</h1>
+
+                    <br/>
+                       <Link to='welcome'>Say Welcome</Link>
+                    <br/>  
+                       <Link to='goodbye'>Say Goodbye</Link>
+                    <br/><br/>
                     <button onClick={handleclick}>
                         Cerrar Sesion
                     </button>
-                   
-                    <Routes>
-                        <Route path='welcome' element={<p>Welcome!!</p>} />
-                    </Routes>
+                    <Outlet/>
+            </div>
 
-           </div>
        );
 }
 
